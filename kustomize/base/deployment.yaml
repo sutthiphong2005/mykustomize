@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+  namespace: allfiles-dev
+  labels:
+    app: mygoapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mygoapp
+  template:
+    metadata:
+      labels:
+        app: mygoapp
+    spec:
+      containers:
+      - name: mygoapp
+        image: docker.io/sutthiphong2005/docker-gs-ping:green
+        ports:
+        - containerPort: 8080
