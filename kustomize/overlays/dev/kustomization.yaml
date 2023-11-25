@@ -3,3 +3,5 @@ resources:
 patchesStrategicMerge:
   - deployment.yaml
 namePrefix: dev-
+commonLabels:
+  env: dev
