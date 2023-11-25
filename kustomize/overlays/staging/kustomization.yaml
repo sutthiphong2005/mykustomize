@@ -1,10 +1,10 @@
-namespace: allfiles-dev 
+namespace: allfiles-staging
 resources:
   - ../../base
 patchesStrategicMerge:
   - deployment.yaml
-namePrefix: dev-
+namePrefix: staging-
 commonLabels:
-  env: dev
+  env: staging
 commonAnnotations:
-  note: Hello, I am dev!
+  note: Hello, I am staging!
